@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.card-container {
+  background-image: url("./media/pattern-background-desktop.svg");
+  background-color: var(--pale-blue);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 800px;
+  min-height: 700px;
+  padding: 90px 0;
+}
+.card {
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  min-height: 500px;
+  margin: auto;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.head-img {
+  height: 175px;
+}
+.order {
+  margin: 20px;
+}
+.order h2 {
+  color: var(--dark-blue);
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.order .text {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--desaturated-blue);
+}
+.plan {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  height: 70px;
+}
+.plan-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.plan-info img {
+  height: 40px;
+}
+.plan-info p {
+  font-size: 1.4rem;
+}
+.annual {
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+.cost {
+  color: var(--desaturated-blue);
+  font-style: italic;
+}
+.change a {
+  color: var(--bright-blue);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+button {
+  color: rgb(255, 254, 254);
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: var(--bright-blue);
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 10px var(--pale-blue);
+}
+.cancel {
+  font-size: 1.4rem;
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 350px) {
+  main {
+    display: block;
+    position: relative;
+  }
+  .card-container {
+    background-image: url("./media/pattern-background-desktop.svg");
+    background-color: var(--very-pale-blue);
+    background-size: 400px;
+    background-repeat: no-repeat;
+  }
+  .card {
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
